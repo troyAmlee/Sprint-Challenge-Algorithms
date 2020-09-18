@@ -2,14 +2,26 @@
 
 ## Exercise I
 
-a)
+a) # O(n)
 
 
-b)
+b) # O(n^2)
 
 
-c)
+c) # O(n)
 
 ## Exercise II
 
-
+# A binary search would be the most applicable in this situation
+# Obtain the floor in the middle of the n-story
+# check to see if the egg is broken if dropped 1 floor less than the current floor
+  # if the egg is broken
+      # Obtain the floor in the middle of the ground floor and current floor (current floor is now "top floor")
+  # if not broken
+    # Drop off floor 1 higher
+    # if broken
+      # return floor 1 higher
+    # else
+      # Obtain floor between current floor and topfloor (current floor is now "ground floor") 
+  
+  # Runtime == O(log n)

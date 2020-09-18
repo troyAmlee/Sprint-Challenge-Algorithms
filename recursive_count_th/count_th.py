@@ -10,6 +10,8 @@ def count_th(word):
     index1 = 0
     index2 = 1
     count = 0
+    if(len(word) == 0):
+        return 0
     def wordcount(word, count = 0):
         if(len(word) == 0):
             print(count)
@@ -19,12 +21,12 @@ def count_th(word):
             count += 1
             nextword = word[index2:]
             print(nextword)
-            wordcount(nextword, count)
+            return wordcount(nextword, count)
         else:
             nextword = word[index2:]
             print(nextword)
-            wordcount(nextword, count)
-    wordcount(word, count)
+            return wordcount(nextword, count)
+    return wordcount(word, count)
     
 
 count_th(wordup)
