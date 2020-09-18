@@ -103,20 +103,20 @@ class SortingRobot:
                 self.move_right()
             if(self.can_move_right() == False):
                 self.set_light_off()
-                if(self._list[-1] == None):
+                if(self.compare_item() == None):
                     self.swap_item()
                     return self._list
             if(self.compare_item() == 1):
                 self.swap_item()
-                print(self._list)
-                print(self._item)
+                # print(self._list)
+                # print(self._item)
             if(self.light_is_on() == False):
                 while(self.light_is_on() == False):
                     if(self._list[self._position] == None):
                         self.swap_item()
                         self.move_right()
                         self.swap_item()
-                        print(self._list)
+                        # print(self._list)
                         self.set_light_on()
                         break
                     if(self.can_move_left()):
