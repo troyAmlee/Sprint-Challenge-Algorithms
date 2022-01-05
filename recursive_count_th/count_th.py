@@ -14,17 +14,13 @@ def count_th(word):
         return 0
     def wordcount(word, count = 0):
         if(len(word) == 0):
-            print(count)
             return count
         elif(word[index1:index2 + 1] == "th"):
-            print(word[index1:index2 + 1])
             count += 1
             nextword = word[index2:]
-            print(nextword)
             return wordcount(nextword, count)
         else:
             nextword = word[index2:]
-            print(nextword)
             return wordcount(nextword, count)
     return wordcount(word, count)
     

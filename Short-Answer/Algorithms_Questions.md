@@ -14,7 +14,7 @@ a)  a = 0
 
 ```
 b)  sum = 0
-    for i in range(n): # O(n^2)
+    for i in range(n): # O(n log n)
       j = 1
       while j < n:
         j *= 2
